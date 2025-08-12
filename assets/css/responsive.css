@@ -1,0 +1,111 @@
+
+/* PC */
+@media (min-width: 1024px) {
+    .content-contact .content-message {
+        margin-top: 10px;
+    }
+}
+
+/* Tablet && Mobile */
+@media (max-width: 1024px) {
+    .places-list .buy-ticket {
+        height: 48px;
+        width: 100%;
+    }
+}
+
+/* Tablet */
+@media (max-width: 1024px) and (min-width: 740px) {
+    .modal .frame {
+        position: absolute;
+        top: 10%;
+        width: 80%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    #header {
+        overflow: hidden;
+    }
+
+    #header .search-btn {
+        display: none;
+    }
+
+    #header .bars-btn {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    #nav {
+        display: block;
+        position: relative;
+    }
+
+    #nav li {
+        display: block;
+    }
+
+    #nav > li > a {
+        display: block;
+        width: 100%;
+        height: 48px;
+        line-height: 20px;
+    }
+
+    #nav > li:first-child {
+        display: inline-block;
+    }
+
+    #nav .subnav {
+        position: initial;
+        background-color: #333;
+    }
+
+    #nav .subnav a {
+        color: #fff;
+        padding-left: 12px;
+        line-height: 22px;
+    }
+
+    #header.show-menu {
+        height: auto;
+    }
+
+    /* The band */
+    .members-list .member {
+        width: 100%;
+    }
+
+    /* Tour dates */
+    .tour-dates .places-list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Contact */
+    .content-contact {
+        flex-wrap: wrap;
+        margin-left: 10px;
+    }
+
+    .content-contact .form-control {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .content-contact .btn-submit {
+        width: 100%;
+        height: 48px;
+    }
+
+    /* Modal */
+    .modal .frame {
+        position: absolute;
+        top: 10%;
+        width: 95%;
+    }
+}
