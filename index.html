@@ -170,15 +170,15 @@
         
         <div id="footer">
             <div class="social-network">
-                <a href="https://www.facebook.com/" class="social-link"><i class="ti-facebook"></i></a>
-                <a href="https://www.twitter.com/" class="social-link"><i class="ti-twitter-alt"></i></a>
-                <a href="https://www.instagram.com/" class="social-link"><i class="ti-instagram"></i></a>
-                <a href="https://www.linkedin.com/" class="social-link"><i class="ti-linkedin"></i></a>
-                <a href="https://www.youtube.com/" class="social-link"><i class="ti-youtube"></i></a>
-                <a href="https://www.pinterest.com/" class="social-link"><i class="ti-pinterest"></i></a>
+                <a href="https://www.facebook.com/"  target="_blank" class="social-link"><i class="ti-facebook"></i></a>
+                <a href="https://www.twitter.com/" target="_blank" class="social-link"><i class="ti-twitter-alt"></i></a>
+                <a href="https://www.instagram.com/" target="_blank" class="social-link"><i class="ti-instagram"></i></a>
+                <a href="https://www.linkedin.com/" target="_blank" class="social-link"><i class="ti-linkedin"></i></a>
+                <a href="https://www.youtube.com/" target="_blank" class="social-link"><i class="ti-youtube"></i></a>
+                <a href="https://www.pinterest.com/" target="_blank" class="social-link"><i class="ti-pinterest"></i></a>
             </div>
             <div class="link-footer">
-                Powered by <a href="https://www.w3schools.com/" class="link-w3">W3Schools</a>
+                Powered by <a href="https://www.w3schools.com/" target="_blank" class="link-w3">W3Schools</a>
             </div>
         </div>
 
@@ -250,10 +250,19 @@
      <script>
         const barsBtn = document.querySelector('.js-bars')
         const header = document.querySelector('.js-header')
+        const closeMenu = document.querySelectorAll('#nav > li > a')
 
         barsBtn.addEventListener('click', function() {
             header.classList.toggle('show-menu')
         })
+
+        for(const close of closeMenu) {
+            close.addEventListener('click', function() {
+                if(!close.nextElementSibling || !close.nextElementSibling.classList.contains('subnav')) {
+                    header.classList.remove('show-menu')
+                }
+            })
+        }
 
      </script>
 </body>
